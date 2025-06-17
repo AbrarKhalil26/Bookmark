@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans Caption", sans-serif;
+}
+main {
+  background-color: #f7ecde;
+}
+header {
+  width: fit-content;
+}
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fec260;
+  width: 100%;
+  height: 35%;
+  transition: all 0.3s ease-in-out;
+}
+header:hover::before {
+  height: 70%;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+}
+
+.bookmark-form,
+.bookmark-list {
+  border-top: 2px dotted #352e28;
+}
+.bookmark-form h2 {
+  font-family: "Righteous", cursive;
+  background: linear-gradient(to right, #3ea55c 30%, #b3ac4a 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.bookmark-form h2::selection{
+  color: black;
+}
+label {
+  color: #212529;
+}
+.btn-submit {
+  width: fit-content;
+}
+.btn-primary {
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #ddd;
+  --bs-btn-active-color: black;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: black;
+}
+.btn-visit {
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #8A9E23;
+  --bs-btn-hover-border-color: #ddd;
+  --bs-btn-active-color: black;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: black;
+}
+.btn-edit {
+  --bs-btn-bg: #d99c39;
+  --bs-btn-border-color: #d99c39;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #c88a2f;
+  --bs-btn-hover-border-color: #ddd;
+  --bs-btn-active-color: black;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: black;
+}
+.btn-delete {
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #D30820;
+  --bs-btn-hover-border-color: #ddd;
+  --bs-btn-active-color: black;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: black;
+}
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-visit, .btn-delete, .btn-edit {
+    color: white;
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-body h2{
+  font-family: "Bree Serif", serif;
+}
+.modal-body li{
+  font-size: 18px;
+}
+.dots div{
+  width: 20px;
+  height: 20px;
+}
+
+::selection{
+  background-color: #fec260;
+}

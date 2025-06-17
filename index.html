@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="./images/bookmark.png" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="py-5 min-vh-100">
+      <div
+        class="container d-flex justify-content-center align-items-center flex-column"
+      >
+        <header class="position-relative my-3">
+          <h1 class="text-center display-5 position-relative m-0">
+            Bookmarker
+          </h1>
+        </header>
+        <section class="bookmark-form w-100 mt-5 pt-4">
+          <h2 class="text-center fs-4 fw-semibold">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>Bookmark your favorite sites</span>
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <form class="d-flex flex-column p-4 gap-2">
+            <div>
+              <label for="bookmarkName" class="form-label fw-semibold">
+                <i class="fa-solid fa-book-bookmark me-2"></i>
+                Site Name
+              </label>
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="bookmarkName"
+                placeholder="Bookmark Name"
+                oninput="validateInputs(this)"
+              />
+            </div>
+            <div>
+              <label for="bookmarkURL" class="form-label fw-semibold">
+                <i class="fa-solid fa-link me-2"></i>
+                Site URL
+              </label>
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="bookmarkURL"
+                placeholder="Website URL"
+                oninput="validateInputs(this)"
+              />
+            </div>
+            <button
+              onclick="addBookmark()"
+              id="addBookmarkBtn"
+              type="button"
+              class="btn btn-primary btn-submit py-2 px-5 mx-auto"
+            >
+              Submit
+            </button>
+            <button
+              onclick="updateBookmark()"
+              id="updateBookmarkBtn"
+              type="button"
+              class="btn btn-warning btn-submit py-2 px-5 mx-auto d-none"
+            >
+              Update
+            </button>
+
+          </form>
+        </section>
+        <section class="bookmark-list w-100 py-4">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="bookmarkTableBody" class="bg-white"></tbody>
+          </table>
+        </section>
+
+        <div id="modal"></div>
+      </div>
+    </main>
+
+    <!-- Bootstrap Bundle -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
