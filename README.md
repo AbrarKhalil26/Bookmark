@@ -17,6 +17,7 @@ This is a simple bookmark manager application that allows users to add, edit, an
 - HTML
 - CSS
 - JavaScript
+- Bootstrap
 
 ### How to Use
 
